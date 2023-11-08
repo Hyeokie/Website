@@ -6,9 +6,9 @@
 
   <style>
     .ProfilePicBox{   
-    width: 100px;
-    height: 100px;
-    border-radius: 30%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
     overflow: hidden;
     }
     .ProfilePic{
@@ -17,11 +17,13 @@
     object-fit: cover;
     }
     .ProfileLetter{
-    font-size: 10px;
+    font-size: 12px;
+    text-align : left;
     }
+    /*이부분이모든 글씨의 크기를 담당*/
     .font {
     text-align : left;
-    font-size : 8px;
+    font-size : 12px;
     /*   3rem = 16 px * 3 = 48px   */
     margin: 10px 10px 30px 40px;
     text-transform: capitalize;
@@ -54,12 +56,14 @@ flex-basis: 30%
 이 값은 flex 아이템의 시작 크기를 설정합니다. 여기서는 컨테이너의 가용 공간의 30%로 설정하고 있습니다. 이것은 flex 아이템이 차지하는 기본 공간의 양을 나타냅니다.*/
 
     width: 30%;
-    height: 100vh;
+    height: 150vh;
     background-color: rgb(236, 229, 194);
     }
-    .fontsize {font-size: 7px;}
+    .fontsize {font-size: 6px;}
     .color{
     color: rgb(116, 69, 34);
+    font-size: 20px;
+    font-weight : bolder;
     }
     .Information{
     display: flex;
@@ -68,7 +72,7 @@ flex-basis: 30%
     justify-content: center; /* 가로 방향 중앙 정렬 */
     flex: 1; /* flex-grow, 자동으로 남은 공간을 채웁니다. */
     width : 69%;
-    height: 100vh;
+    height: 150vh;
     background-color: rgb(255, 255, 255);
     }
     .InformationBox{
@@ -78,7 +82,7 @@ flex-basis: 30%
     justify-content: center; /* 가로 방향 중앙 정렬 */
     flex: 1; /* flex-grow, 자동으로 남은 공간을 채웁니다. */
     width : 160%;
-    height: 12vh;
+    height: 20vh;
     background-color: #ffffff;
     border-width : 0.5px ;
     border-style : solid ;
@@ -91,7 +95,7 @@ flex-basis: 30%
     justify-content: center; /* 가로 방향 중앙 정렬 */
     flex: 1; /* flex-grow, 자동으로 남은 공간을 채웁니다. */
     width : 160%;
-    height: 8vh;
+    height: 16vh;
     background-color: #ffffff;
     border-width : 0.5px ;
     border-style : solid ;
@@ -104,7 +108,7 @@ flex-basis: 30%
     justify-content: center; /* 가로 방향 중앙 정렬 */
     flex: 1; /* flex-grow, 자동으로 남은 공간을 채웁니다. */
     width : 160%;
-    height: 18vh;
+    height: 26vh;
     background-color: #ffffff;
     border-width : 0.5px ;
     border-style : solid ;
@@ -148,16 +152,14 @@ flex-basis: 30%
       <div class = "ProfilePicBox">
         <img class="ProfilePic" src="면접 사진.jpg" alt="ProfilePic">
       </div>
-      <h3 style="color: rgb(0, 0, 0);">HYEOKCHAN LEE</h3>
+      <h1 style="color: rgb(0, 0, 0);">HYEOKCHAN LEE</h1>
       
       <div class = "ProfileLetter">
       <p>
-      Geburtsdatum-ort: <br>	31.01.1997 in Jinju, 
-      Südkorea<br>
-      Staatsangehörigkeit:<br>
-      Südkoreanisch<br>
-      Familienstand<br>	
-      ledig<br>
+      Geburtsdatum-ort: <br>	
+      31.01.1997 in Jinju, Südkorea<br>
+      Staatsangehörigkeit : Südkoreanisch<br>
+      Familienstand : ledig
       </p>
       </div>
     </div>
@@ -248,6 +250,7 @@ Hobbys			  Algorithm zu lösen, Fußball
   
 </body>
 </html>
+
 
 
 
