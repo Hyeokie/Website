@@ -5,10 +5,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-* {
-  box-sizing: border-box;
-}
-
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -29,8 +25,9 @@ background-color: #bbb;
   background-size: contain;
   background-position: right top;
   background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
 }
-
 /* Container for flexboxes */
 .row {
   display: -webkit-flex;
@@ -53,6 +50,7 @@ background-color: #bbb;
   padding: 10px;
   text-align: center;
 }
+
 a{
           font-size: 12px
       }
@@ -64,11 +62,20 @@ a{
   }
 }
 </style>
+<!--여기서 자바스크립트가 작동하는 방법은 우선 CSS에 Opasity를 0로 설정해서 투명한 것으로 둔다. 이후 HTML에 적용하고 싶은 텍스트나 이미지를 생성한다. 마지막으로 Javascript를 이용해서 작동을 시킨다. 여기서 작동시키는 순서는 우선"window.onload = function() {...}"이라는 코드를 추가하여 페이지가 완전히 작동 되었을 때 작동하는 기능을 추가한다. 그 다음 다른 이름의 번수로 변화시킬 CSS 함수를 가져온다. 마지막으로 그 함수의 변화 시킬 기능을 최종적으로 변화 시킨다(ex 불투명하게)-->
+<script>
+  
+  window.onload = function() {
+    var headerText = document.querySelector('.header');
+    headerText.style.opacity = 1; // 투명도를 1로 설정
+  };
+  
+</script>
 </head>
 <body>
 
 <div class="header">
-  <h4>My Name is HYEOKCHAN LEE!</h4>
+<h3>My Name is HYEOKCHAN LEE!</h3>
   The difficult situations always come <br>but with a change in perspective <br>
   even that can become a <br>source of gratitude.
   </div>
@@ -95,7 +102,7 @@ a{
       favorite : Rabbit<br>
       to impliment : ARGUMENT<br>
       pros : GRIT<br>
-      cons : quite
+      cons : Introvert
     </p>
   </div>
   <div class="column" style="background-color:#ccc;">
@@ -110,8 +117,9 @@ a{
 </div>
 
 <div class="footer">
-  <p></p>
+  <p>
+    Lebe gern und arbeite gern. Es gibt so viel Gutes zu tun.
+  </p>
 </div>
-
 </body>
 </html>
